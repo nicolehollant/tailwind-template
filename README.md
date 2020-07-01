@@ -2,7 +2,7 @@
 
 # tailwind-template
 
-A little proof of concept SPA framework I put together in quarantine during the corona pandemic
+Little template repository for basic tailwind stuff
 
 ## Running ⛹️‍♀️
 
@@ -22,3 +22,7 @@ yarn build # or npm run build
 ```
 
 just builds tailwind to not be huge!
+
+## Example 🚀
+
+[base on netlify](https://xenodochial-pasteur-bea80c.netlify.app/)
