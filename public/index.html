@@ -1,19 +1,320 @@
 <!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Tailwind Template</title>
   <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="./tailwind.css">
   <link rel="stylesheet" href="./build/tailwind.css">
-  <script src="./utils/utils.js"></script>
-  <script src="./components/card.js"></script>
-  <script src="./components/clicker.js"></script>
-  <script src="./components/navbar.js"></script>
-  <script defer src="./main.js"></script>
-  <script src="./pages/about.js"></script>
-  <script src="./pages/home.js"></script>
-  <script src="./pages/notfound.js"></script>
 </head>
-<body>
-  <div id="app"></div>
-</body></html>
+<body class="bg-gray-200 font-sans">
+  <div class="space-y-12">
+    <header class="container flex justify-between items-center py-8 px-4 mx-auto border-b-2 border-gray-300">
+      <div class="flex justify-center items-center space-x-8">
+        <a href="/">
+          <img class="w-12 h-12 sm:w-16 sm:h-16" src="./assets/logo.png" alt="tailwind logo">
+        </a>
+        <a href="/">
+          <h1 class="text-base sm:text-3xl font-semibold text-gray-800 break-words">
+            Tailwind Template
+          </h1>
+        </a>
+      </div>
+      <div class="flex space-x-4 sm:space-x-8">
+        <div class="text-gray-700 font-semibold hover:underline">
+          <a href="/usage.html">Usage</a>
+        </div>
+        <div class="text-gray-700 font-semibold hover:underline">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </header>
+    <main class="container px-4 mx-auto space-y-10">
+      <div class="space-y-4">
+        <h2 class="text-2xl font-medium text-teal-700">
+          What's this?
+        </h2>
+        <p class="text-lg text-gray-800">
+          I wanted to have a git template set up for 
+          <a 
+            href="https://tailwindcss.com/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="inline-block border-b-2 border-transparent text-indigo-600 font-medium hover:text-indigo-800 hover:border-indigo-600 transition duration-100"
+          >
+            Tailwind.
+          </a>
+          This is just some scaffolded content for that 🥰
+        </p>
+      </div>
+      <div class="space-y-4">
+        <h2 class="text-2xl font-medium text-teal-700">
+          What's Tailwind?
+        </h2>
+        <p class="text-lg text-gray-800">
+          Tailwind is my favorite utility-based CSS framework! It provides a bunch <span class="italic">(a bunch...)</span> of utility classes. If this doesnt mean anything to you, I'll try and explain what it's all about...
+        </p>
+        <h3 class="pt-8 pb-2 text-lg font-medium text-blue-800">
+          Tailwind's Utility Classes
+        </h3>
+        <p class="text-lg text-gray-800">
+          Utility classes are pretty simple: think of them as individual classes for whatever CSS property and value you are looking to use.
+        </p>
+        <p class="text-lg text-gray-800">
+          Where you may instinctively add 
+          <code class="mx-1 text-blue-800 text-lg bg-blue-200 p-1 rounded">margin-top: 1rem;</code> 
+          or 
+          <code class="mx-1 text-blue-800 text-lg bg-blue-200 p-1 rounded">letter-spacing: 0.1em;</code> 
+          to whatever selector is at hand in your stylesheet, now you'll simply add classes in your HTML.
+        </p>
+        <div class="space-y-6 md:space-y-0 md:grid md:grid-cols-2 md:p-8 md:gap-6">
+<div class="space-y-2">
+  <h4 class="font-black text-blue-700 tracking-widest uppercase">&bull; Vanilla</h4>
+<div class="bg-gray-900 space-y-4 p-4 text-blue-300 rounded-lg">
+  <p class="text-lg text-green-400">/index.html</p>
+<pre class="font-mono overflow-auto">
+&lt;button class=&quot;button__primary&quot;&gt;
+  Submit
+&lt;/button&gt;
+</pre>
+<div class="p-6">
+  <div class="w-full h-px bg-blue-800"></div>
+</div>
+<p class="text-lg text-green-400">/main.css</p>
+<pre class="font-mono overflow-auto">
+.button__primary {
+  margin: 0.5rem 1rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #4299e1;
+  border-radius: 0.5rem;
+  transition-property: background-color, border-color, color;
+  transition-duration: 300ms;
+}
+.button__primary:hover {
+  background-color: #2b6cb0;
+}
+.button__primary:focus {
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+</pre>
+</div>
+</div>
+
+<div class="space-y-8">
+  <div class="space-y-2">
+    <h4 class="font-black text-blue-700 tracking-widest uppercase">&bull; Tailwind</h4>
+<div class="bg-gray-900 space-y-4 p-4 text-blue-300 rounded-lg ">
+  <p class="text-lg text-green-400">/index.html</p>
+<pre class="font-mono overflow-auto">
+&lt;button class=&quot;
+  px-4 py-2 text-lg font-medium text-white bg-blue-500 rounded-lg
+  hover:bg-blue-700 focus:outline-none focus:shadow-outline
+  transition-colors duration-300
+&quot;&gt;
+  Submit
+&lt;/button&gt;
+</pre>
+</div>
+</div>
+<div class="space-y-2">
+  <h4 class="font-black text-blue-700 tracking-widest uppercase">&bull; Preview</h4>
+<div class="bg-gray-900 h-32 flex justify-center items-center rounded-lg overflow-auto">
+  <button class="
+    px-4 py-2 text-lg font-medium text-white bg-blue-500 rounded-lg
+    hover:bg-blue-700 focus:outline-none focus:shadow-outline
+    transition-colors duration-300
+  ">
+    Submit
+  </button>
+</div>
+</div>
+</div>
+        </div>
+
+        <p class="text-lg text-gray-800">
+          There's a billion things to go over, of course, although much of it would be better to look at within 
+          <a 
+            href="https://tailwindcss.com/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="inline-block border-b-2 border-transparent text-indigo-600 font-medium hover:text-indigo-800 hover:border-indigo-600 transition duration-100"
+          >
+            Tailwind's docs.
+          </a>
+          I'll try not to bore, but hopefully give some quick insight.
+        </p>
+        <h3 class="pt-8 pb-2 text-lg font-medium text-blue-800">
+          The Box Model And You
+        </h3>
+        <p class="text-lg text-gray-800">
+          <code class="mx-1 text-blue-800 text-lg bg-blue-200 p-1 rounded">padding</code> and <code class="mx-1 text-blue-800 text-lg bg-blue-200 p-1 rounded">margin</code> are handled in the same way, although <code class="mx-1 text-blue-800 text-lg bg-blue-200 p-1 rounded">border</code> is a bit different.
+        </p>
+        <p class="text-lg text-gray-800">
+          <code class="mx-1 text-blue-800 text-lg bg-blue-200 p-1 rounded">padding</code> and <code class="mx-1 text-blue-800 text-lg bg-blue-200 p-1 rounded">margin</code> are associated with the following classes:
+          <div class="space-y-6 lg:space-y-0 lg:p-8 lg:grid lg:grid-cols-2 lg:gap-6">
+            <div class="space-y-2">
+              <h4 class="font-black text-blue-700 tracking-widest uppercase">&bull; margin</h4>
+              <div class="w-full lg:w-max bg-white shadow-md p-4 text-blue-300 rounded-lg grid grid-flow-row gap-2" style="grid-template-columns: auto auto 1fr;">
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">m-{spacing}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">margin: spacing</code>
+    
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">mx-{spacing}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">margin: unset spacing</code>
+    
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">my-{spacing}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">margin: spacing unset</code>
+    
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">ml-{spacing}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">margin-left: spacing</code>
+    
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">mr-{spacing}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">margin-right: spacing</code>
+                  
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">mt-{spacing}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">margin-top: spacing</code>
+    
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">mb-{spacing}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">margin-bottom: spacing</code>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <h4 class="font-black text-blue-700 tracking-widest uppercase">&bull; padding</h4>
+              <div class="w-full lg:w-max bg-white shadow-md p-4 text-blue-300 rounded-lg grid grid-flow-row gap-2" style="grid-template-columns: auto auto 1fr;">
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">p-{spacing}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">padding: spacing</code>
+    
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">px-{spacing}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">padding: unset spacing</code>
+    
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">py-{spacing}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">padding: spacing unset</code>
+    
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">pl-{spacing}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">padding-left: spacing</code>
+    
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">pr-{spacing}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">padding-right: spacing</code>
+                  
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">pt-{spacing}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">padding-top: spacing</code>
+    
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">pb-{spacing}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">padding-bottom: spacing</code>
+              </div>
+            </div>
+          </div>
+        </p>
+        <p>
+          <code class="mx-1 text-blue-800 text-lg bg-blue-200 p-1 rounded">padding</code> and <code class="mx-1 text-blue-800 text-lg bg-blue-200 p-1 rounded">margin</code> can take <code class="mx-1 text-green-800 text-lg bg-green-200 p-1 rounded">spacing</code> as any value from the following:
+        </p>
+        <li class="list-inside list-disc pl-4">
+          <code class="mx-1 text-teal-800 text-lg bg-teal-200 p-1 rounded">[auto, 0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 56, 64, px]</code>
+        </li>
+        <li class="list-inside list-disc pl-4">
+          numbers are associated with the value <code class="mx-1 text-green-800 text-lg bg-green-200 p-1 rounded">calc(spacing &times; 0.25rem)</code>
+        </li>
+        <li class="list-inside list-disc pl-4">
+          auto is associated <code class="mx-1 text-green-800 text-lg bg-green-200 p-1 rounded">auto</code> and px is associated with <code class="mx-1 text-green-800 text-lg bg-green-200 p-1 rounded">1px</code>
+        </li>
+        <p class="text-lg text-gray-800">
+          <code class="mx-1 text-blue-800 text-lg bg-blue-200 p-1 rounded">border</code> size, on the other hand, is associated with the following classes:
+          <div class="w-full overflow-auto sm:p-8 space-y-2 mx-auto">
+              <h4 class="font-black text-blue-700 tracking-widest uppercase">&bull; border</h4>
+              <div class="w-full lg:w-max bg-white shadow-md p-4 text-blue-300 rounded-lg grid grid-flow-row gap-2" style="grid-template-columns: auto auto 1fr;">
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">border-{size}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">border: calc(size &times; 1px)</code>
+
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">border-l-{size}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">border-left-width: calc(size &times; 1px)</code>
+    
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">border-r-{size}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">border-right-width: calc(size &times; 1px)</code>
+                  
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">border-t-{size}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">border-top-width: calc(size &times; 1px)</code>
+    
+                  <code class="block mx-1 text-blue-800 bg-blue-200 p-1 rounded">border-b-{size}</code>
+                  <div class="flex items-center justify-center">&rarr;</div>
+                  <code class="block mx-1 text-green-800 bg-green-200 p-1 rounded">border-bottom-width: calc(size &times; 1px)</code>
+              </div>
+          </div>
+        </p>
+        <p>
+          <code class="mx-1 text-blue-800 text-lg bg-blue-200 p-1 rounded">border</code> can take <code class="mx-1 text-green-800 text-lg bg-green-200 p-1 rounded">size</code> as any value from the following:
+        </p>
+        <li class="list-inside list-disc pl-4">
+          <code class="mx-1 text-teal-800 text-lg bg-teal-200 p-1 rounded">[0, 2, 4, 8]</code>
+        </li>
+        <li class="list-inside list-disc pl-4">
+          omitting size will give a border width of <code class="mx-1 text-green-800 text-lg bg-green-200 p-1 rounded">1px</code>
+        </li>
+        <li class="list-inside list-disc pl-4">
+          numbers are associated with the value <code class="mx-1 text-green-800 text-lg bg-green-200 p-1 rounded">calc(size &times; 1px)</code>
+        </li>
+        <h3 class="pt-8 pb-2 text-lg font-medium text-blue-800">
+          Colors
+        </h3>
+        <p class="text-lg text-gray-800">
+          <code class="mx-1 text-blue-800 text-lg bg-blue-200 p-1 rounded">background-color</code>, <code class="mx-1 text-blue-800 text-lg bg-blue-200 p-1 rounded">border-color</code>, and <code class="mx-1 text-blue-800 text-lg bg-blue-200 p-1 rounded">color</code> all receive the same options. They have a variety of colors and a selection of shades for each color ranging from lightest to darkest.
+        </p>
+        <li class="list-inside list-disc pl-4">
+          unshaded colors: <code class="mx-1 text-teal-800 text-lg bg-teal-200 p-1 rounded">[black, white, transparent, current]</code>
+        </li>
+        <li class="list-inside list-disc pl-4">
+          shaded colors: <code class="mx-1 text-teal-800 text-lg bg-teal-200 p-1 rounded">[gray, red, orange, yellow, green, teal, blue, indigo, purple, pink]</code>
+        </li>
+        <li class="list-inside list-disc pl-4">
+          shade values: <code class="mx-1 text-teal-800 text-lg bg-teal-200 p-1 rounded">[100, 200, 300, 400, 500, 600, 700, 800, 900]</code>
+        </li>
+        <li class="list-inside list-disc pl-4">
+          <code class="mx-1 text-blue-800 text-lg bg-blue-200 p-1 rounded">background-color</code> is represented as <code class="mx-1 text-green-800 text-lg bg-green-200 p-1 rounded">bg-{color}-{shade}</code>
+        </li>
+        <li class="list-inside list-disc pl-4">
+          <code class="mx-1 text-blue-800 text-lg bg-blue-200 p-1 rounded">border-color</code> is represented as <code class="mx-1 text-green-800 text-lg bg-green-200 p-1 rounded">border-{color}-{shade}</code>
+        </li>
+        <li class="list-inside list-disc pl-4">
+          <code class="mx-1 text-blue-800 text-lg bg-blue-200 p-1 rounded">color</code> is represented as <code class="mx-1 text-green-800 text-lg bg-green-200 p-1 rounded">text-{color}-{shade}</code>
+        </li>
+        <h3 class="pt-8 pb-2 text-lg font-medium text-blue-800">
+          That's All!
+        </h3>
+        <p class="text-lg text-gray-800">
+          Hopefully that has you excited about Tailwind! Of course, there's tons we didn't mention, but you should be set to go 🥰
+        </p>
+      </div>
+    </main>
+    <div class="bg-gray-300">
+      <footer class="container py-8 px-4 mx-auto ">
+        <div class="flex justify-center items-center space-x-8">
+          <a 
+            class="text-base font-medium text-pink-700 hover:text-pink-900 hover:underline transition duration-100"
+            href="https://colehollant.com" target="_blank" rel="noopener noreferrer"
+          >
+            nicole hollant 💞
+          </a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,3 +1,4 @@
 @tailwind base;
+@import "./assets/Inter\ Web/inter.css";
 @tailwind components;
 @tailwind utilities;

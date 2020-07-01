@@ -1,22 +1,21 @@
 {
-  "name": "quarantine-js",
+  "name": "tailwind-template",
   "version": "1.0.0",
-  "repository": "git@github.com:colehollant/quarantine-js.git",
+  "repository": "git@github.com:colehollant/tailwind-template.git",
   "author": "Cole Hollant <coleghollant@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "serve": "cross-env NODE_ENV=development node build.js; concurrently \"postcss public/tailwind.css -o public/build/tailwind.css --watch\"  \"live-server ./public\"",
-    "development": "cross-env NODE_ENV=development node build.js; postcss public/tailwind.css -o public/build/tailwind.css",
-    "build": "cross-env NODE_ENV=production concurrently \"postcss public/tailwind.css -o public/build/tailwind.css\" \"node build.js\"",
-    "start": "yarn run serve"
+    "serve": "cross-env NODE_ENV=development; concurrently \"postcss public/tailwind.css -o public/build/tailwind.css --watch\"  \"live-server ./public\"",
+    "development": "cross-env NODE_ENV=development; postcss public/tailwind.css -o public/build/tailwind.css",
+    "build": "cross-env NODE_ENV=production concurrently \"npx tailwindcss build public/tailwind.css -o public/build/tailwind.css\"",
+    "start": "npm run serve"
   },
   "dependencies": {
     "autoprefixer": "^9.5.1",
     "express": "^4.17.1",
-    "tailwindcss": "^1.0"
+    "tailwindcss": "^1.4.6"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^1.2.0",
     "concurrently": "^4.1.0",
     "cross-env": "^5.2.0",
     "cssnano": "^4.1.10",

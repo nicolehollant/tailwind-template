@@ -1,6 +1,24 @@
+const minMax = {
+  min: 'min-content',
+  max: 'max-content',
+}
 module.exports = {
+  purge: {
+    content: [
+      './src/**/*.html',
+      './src/**/*.vue',
+    ],
+  },
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
+      serif: ['Georgia', 'Cambria', "Times New Roman", 'Times', 'serif'],
+      mono: ['Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace']
+    },
+    extend: {
+      width: minMax,
+      height: minMax,
+    },
   },
   variants: {},
   plugins: [],
