@@ -4,9 +4,10 @@ const minMax = {
 }
 module.exports = {
   purge: {
+    enabled: false,
     content: [
-      './src/**/*.html',
-      './src/**/*.vue',
+      './public/**/*.html',
+      './public/**/*.vue',
     ],
   },
   theme: {
