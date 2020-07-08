@@ -3,13 +3,10 @@ const minMax = {
   max: 'max-content',
 }
 module.exports = {
-  purge: {
-    enabled: false,
-    content: [
-      './public/**/*.html',
-      './public/**/*.vue',
-    ],
-  },
+  purge: [
+    './public/**/*.html',
+    './public/**/*.vue',
+  ],
   theme: {
     fontFamily: {
       sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
